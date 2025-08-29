@@ -79,13 +79,15 @@
         align-items: center;
     }
 
-    #slider .bannercnt1{
+    #slider .bannercnt1 {
         margin-top: 180px;
     }
-    #slider{
-        padding: 20px;
+
+    #slider {
+        padding: 5px;
     }
-    #reviews .container .contents{
+
+    #reviews .container .contents {
         flex-direction: column;
         width: 100%;
     }
