@@ -1,7 +1,98 @@
 @media (max-width: 767px) {
     .container {
-        width: 95%;
-        margin: auto;
+        width: 100%;
     }
+
+    .links, .links.notification {
+        display: none !important;
+    }
+
+    .form-control {
+        margin: auto;
+        padding: 10px 10px 10px 40px;
+    }
+
+    .glass {
+        left: 6px;
+        font-size: 20px;
+    }
+
+    .filter {
+        right: 10px;
+        font-size: 20px;
+    }
+
+    .banner2 {
+        display: none;
+    }
+
+    .banner1 {
+        width: 100%;
+    }
+
+    #banner {
+        padding: 10px 15px;
+    }
+
+    #drop {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+
+    #drop .dropoff {
+        padding: 15px 20px;
+    }
+
+    #drop .dropoff select {
+        width: 100%;
+    }
+
+    #drop .dropoff h2 {
+        margin-top: 10px;
+    }
+
+    #RecomendationCar .cards1 {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+    #RecomendationCar .container .RD {
+        flex-direction: column;
+    }
+
+    #topfooter .footer1 {
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px;
+        width: 100%;
+    }
+
+    #topfooter .footer1>div, #bottomfooter .footer2>div, #bottomfooter .footer3>div {
+        width: 100%;
+        padding: 0;
+    }
+
+    #topfooter .footer1 a {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    footer {
+        padding: 0px;
+        background-color: #f6f7f9;
+    }
+
+    #bottomfooter .container .footer2 {
+        gap: 5px;
+    }
+
+    #bottomfooter .container h1{
+        margin-left: 30px;
+    }
+
+
+
 
 }

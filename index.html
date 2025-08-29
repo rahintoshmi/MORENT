@@ -1,38 +1,681 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MORENT</title>
     <link rel="shortcut icon" href="./images/Logo (1).png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./css/slick-theme.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css">
-   
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
+
 <body>
     <header>
-        <nav>
-            <div class="row">
-                <div class="container">
-                <div class="col-lg-6 header1">
-                    <a href="#">MORENT</a>
-                    <form action="">
-                        <input type="text" placeholder="Search something here">
-                        <div class="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <div class="filter"><img src="/images/filter.png" alt=""></div>
-                    </form>
-                </div>
-                <div class="col-lg-6 header">
-                    <div class="links"><a href="#"><i class="fa-solid fa-heart"></i></a></div>
-                    <div class="links notification"><a href="#"><i class="fa-solid fa-bell"></i></a></div>
-                    <div class="links"><a href="#"><i class="fa-solid fa-gear"></i></a></div>
-                    <div><img src="./images/Profil.png" alt=""></div>
-                </div></div>
+        <nav class="container d-flex justify-content-between align-items-center">
+            <!-- Left side: Logo + Search (for large screens) -->
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="fw-bold text-primary">MORENT</a>
+                <form class="d-none d-lg-flex position-relative">
+                    <input type="text" placeholder="Search something here" class="form">
+                    <div class="glass position-absolute">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="filter position-absolute">
+                        <img src="/images/filter.png" alt="">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right side: Icons -->
+            <div class="d-flex align-items-center gap-3">
+                <div class="links"><a href="#"><i class="fa-solid fa-heart"></i></a></div>
+                <div class="links notification"><a href="#"><i class="fa-solid fa-bell"></i></a></div>
+                <div class="links"><a href="#"><i class="fa-solid fa-gear"></i></a></div>
+                <div><img src="./images/Profil.png" alt=""
+                        style="width:50px;height:50px;border-radius:50%; margin-top: 10px;"></div>
             </div>
         </nav>
+
+        <!-- Mobile Search (hidden on lg and up) -->
+        <div class="container d-lg-none mt-2">
+            <form class="position-relative">
+                <input type="text" placeholder="Search something here" class="form-control">
+                <div class="glass position-absolute"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="filter position-absolute"><img src="/images/filter.png" alt=""></div>
+            </form>
+        </div>
     </header>
-    
-    
+    <main>
+        <!-- Banner Starts -->
+        <section id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 banner1">
+                        <h2>The Best Platform <br> for Car Rental</h2>
+                        <p>Ease of doing a car rental safely and <br>reliably. Of course at a low price.</p>
+
+                        <a href="#">Rental Car</a>
+
+                    </div>
+                    <div class="col-lg-6 banner2">
+                        <h2>Easy way to rent a <br> car at a low price</h2>
+                        <p>Providing cheap car rental services and <br>safe and comfortable facilities.</p>
+
+                        <a href="#">Rental Car</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- banner ends -->
+         <!-- drop off starts -->
+        <section id="drop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 dropoff">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/mark.png" alt="" style="width: 25px; height: 20px;">
+                            <h1>Pick - Up</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                            <h2>Locations</h2>
+                           <select class="city-select">
+                                 <option value="" disabled selected>Select your city</option>
+                                 <option value="new-york">New York</option>
+                                 <option value="los-angeles">Los Angeles</option>
+                                 <option value="chicago">Chicago</option>
+                                 <option value="houston">Houston</option>
+                                 <option value="phoenix">Phoenix</option>
+                            </select>
+                        </div>
+                       <div class="col-lg-4">
+                            <h2>Date</h2>
+                           <select class="date-select">
+                                 <option value="" disabled selected>Select your Date</option>
+                                 <option value="today">Today</option>
+                                 <option value="tomorrow">Tomorrow</option>
+                                 <option value="day-after">Day after tomorrow</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2>Time</h2>
+                           <select class="time-select">
+                                 <option value="" disabled selected>Select your Time</option>
+                                  <option value="morning">9:00 AM - 11:00 AM</option>
+                                  <option value="afternoon">1:00 PM - 3:00 PM</option>
+                                  <option value="evening">4:00 PM - 6:00 PM</option>
+                            </select>
+                        </div>
+                        </div>
+                       
+                    </div>
+                    <div class="col-lg-2 filter2">
+                       <a href="#"><i class="fa-solid fa-up-down"></i></a>
+                    </div>
+                    <div class="col-lg-5 dropoff">
+                        <div class="d-flex align-items-center gap-2">
+                            <img src="./images/mark.png" alt="" style="width: 25px; height: 20px;">
+                            <h1>Drop - Off</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                            <h2>Locations</h2>
+                           <select class="city-select">
+                                 <option value="" disabled selected>Select your city</option>
+                                 <option value="new-york">New York</option>
+                                 <option value="los-angeles">Los Angeles</option>
+                                 <option value="chicago">Chicago</option>
+                                 <option value="houston">Houston</option>
+                                 <option value="phoenix">Phoenix</option>
+                            </select>
+                        </div>
+                       <div class="col-lg-4">
+                            <h2>Date</h2>
+                           <select class="date-select">
+                                 <option value="" disabled selected>Select your Date</option>
+                                 <option value="today">Today</option>
+                                 <option value="tomorrow">Tomorrow</option>
+                                 <option value="day-after">Day after tomorrow</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2>Time</h2>
+                           <select class="time-select">
+                                 <option value="" disabled selected>Select your Time</option>
+                                  <option value="morning">9:00 AM - 11:00 AM</option>
+                                  <option value="afternoon">1:00 PM - 3:00 PM</option>
+                                  <option value="evening">4:00 PM - 6:00 PM</option>
+                            </select>
+                        </div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- drop off ends -->
+
+        <!--popularcards cards starts -->
+         <section id="popularcar">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>Popular Car</h1>
+                    <p>View ALL</p>
+                </div>
+                <div class="slider d-flex justify-content-between align-items-center gap-1">
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4>
+                                <del>$100.00</del></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4>
+                                 <del>$100.00</del></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+
+                </div>
+            </div>
+
+         </section>
+        <!-- popular cards ends -->
+        <!--recommendation cards starts -->
+         <section id="RecomendationCar">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>Recomendation Car</h1>
+                </div>
+                <div class="RD d-flex justify-content-between align-items-center gap-3">
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4>
+                                <del>$100.00</del></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4>
+                                 <del>$100.00</del></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+
+                </div>
+            </div>
+
+         </section>
+        <!-- popular cards ends -->
+          <!--recommendation cards starts -->
+         <section id="RecomendationCar" style="padding-top: 30px;">
+            <div class="container">
+                <div class="RD d-flex justify-content-between align-items-center gap-3">
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4>
+                                <del>$100.00</del></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+                    <div class="col-lg-3 cards1">
+                        <div class="d-flex justify-content-between align-items-center mb-5">
+                            <div class="col-lg-6">
+                                <h2>Koenigsegg</h2>
+                                <p>Sport</p>
+                            </div>
+                            <div class="col-lg-6 d-flex justify-content-end">
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                            <img src="./images/car (1).png" alt="" style="width: 100%; height: fit-content; margin-bottom: 20px;">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/gas-station.png" alt="" style="width: 10px; height: 10px; text-align: center;">
+                                     <p>90L</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/Car.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>Manual</p>
+                                </div>
+                                <div class="col-lg-4 d-flex jusity-content-center align-items-center gap-2">
+                                    <img src="./images/profile-2user.png" alt="" style="width: 10px; height: 10px;">
+                                    <p>2People</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div> <h4>$99.00/<span>day</span></h4>
+                                 <del>$100.00</del></div>
+                                <div class="btn"><a href="#">Rent Now</a></div>
+                            </div>
+
+                       
+                    </div>
+
+                </div>
+                <div class="btn1 d-flex justify-content-between align-items-center">
+                    <a href="#" class="btn2 d-flex jusity-content-center align-items-center" style="margin: auto;">Show More Car</a>
+                    <p class="d-flex justify-content-end">120 Car</p>
+                </div>
+            </div>
+
+         </section>
+        <!-- popular cards ends -->
+    </main>
+    <footer>
+        <section id="topfooter">
+            <div class="container">
+            <div class="footer1 d-flex justify-content-between align-items-center">
+                <div class="col-lg-6">
+                    <a href="#" class="fw-bold text-primary">MORENT</a>
+                    <p>Our vision is to provide convenience  <br>and help increase your sales business.</p>
+                </div>
+                <div class="col-lg-2">
+                   <a href="#" class="a1">About</a>
+                    <a href="#">How it works</a>
+                     <a href="#">Featured</a>
+                      <a href="#">Partnership</a>
+                       <a href="#">Bussiness Relation</a>
+
+                </div>
+                <div class="col-lg-2">
+                   <a href="#" class="a1">Community</a>
+                    <a href="#">Events</a>
+                     <a href="#">Blog</a>
+                      <a href="#">Podcast</a>
+                       <a href="#">Invite a friend</a>
+
+                </div>
+                  <div class="col-lg-2">
+                   <a href="#" class="a1">Socials</a>
+                    <a href="#">Discord</a>
+                     <a href="#">Instagram</a>
+                      <a href="#">Twitter</a>
+                       <a href="#">Facebook</a>
+
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="bottomfooter">
+            <div class="container">
+            <div class="footer2 d-flex justify-content-between align-items-center">
+                <div class="col-lg-6">
+                    <h1>©2022 MORENT. All rights reserved</h1>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-between align-items-center">
+                    <h3>Privacy & Policy</h3>
+                    <h3>Terms & Condition</h3>
+                </div>
+            </div>
+        </div>
+        </section>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/slick.min.js"></script>
+<script src="./js/app.js"></script>
+
 </body>
+
 </html>
