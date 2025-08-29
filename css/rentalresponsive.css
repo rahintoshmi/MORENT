@@ -1,0 +1,133 @@
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+
+    .links, .links.notification {
+        display: none !important;
+    }
+
+    .form-control {
+        margin: auto;
+        padding: 10px 10px 10px 40px;
+    }
+
+    .glass {
+        left: 6px;
+        font-size: 20px;
+    }
+
+    .filter {
+        right: 10px;
+        font-size: 20px;
+    }
+
+    #drop {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 16px;
+    }
+
+    .dropoff {
+        padding: 15px 20px;
+    }
+
+    .dropoff select {
+        width: 100%;
+    }
+
+    .dropoff h2 {
+        margin-top: 10px;
+    }
+
+    #main #drop .container {
+        margin-top: 30%;
+    }
+
+    .selectSection {
+        padding: 49px;
+    }
+
+    #popularcar {
+        flex-direction: column;
+    }
+
+    #popularcar .cards1 {
+        width: 100%;
+        height: 400px;
+    }
+
+    #mainbtn .btn1 {
+        padding: 38px 25px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #topfooter .footer1 {
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px;
+        width: 100%;
+    }
+
+    #topfooter .footer1>div, #bottomfooter .footer2>div, #bottomfooter .footer3>div {
+        width: 100%;
+        padding: 0;
+    }
+
+    #topfooter .footer1 a {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    footer {
+        padding: 0px;
+        background-color: #f6f7f9;
+    }
+
+    #bottomfooter .container .footer2 {
+        gap: 5px;
+    }
+
+    #bottomfooter .container h1 {
+        margin-left: 30px;
+    }
+
+}

@@ -158,98 +158,9 @@ form input {
     right: 0;
 }
 
-
-/*=============================================
-=            banner            =
-=============================================*/
-#banner {
-    padding: 10px 0px 16px;
-    background-color: #f6f7f9;
-}
-
-#banner .row {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 24px;
-}
-
-.banner1 {
-    background-image: url(../images/Ads1.png);
-    max-width: 550px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    padding: 20px 20px;
-    border-radius: 8px;
-    width: 100%;
-}
-
-.banner2 {
-    background-image: url(../images/Ads2.png);
-    max-width: 550px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 250px;
-    padding: 20px 20px;
-    border-radius: 8px;
-    width: 100%;
-}
-
-.banner1 h2, .banner2 h2 {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 120%;
-    letter-spacing: -0.01em;
-    color: var(--primary-0);
-}
-
-.banner1 p, .banner2 p {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 160%;
-    letter-spacing: 0.02em;
-    color: var(--primary-0);
-    margin: 10px 0px 17px;
-}
-
-.banner1 a {
-    font-weight: 600;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px 17px;
-    background-color: #3563E9;
-    border-color: #3563E9;
-    color: var(--primary-0);
-}
-
-.banner2 a {
-    font-weight: 600;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px 17px;
-    background-color: #5CAFFC;
-    border-color: #5CAFFC;
-    color: var(--primary-0);
-}
-
-/*=====  End of banner  ======*/
 /* for drop off */
-#drop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f6f7f9;
-    padding: 20px 0;
-    margin: 0 auto;
-}
-
 .dropoff {
-    padding: 21px 55px 21px 5px;
+    padding: 21px 65px 21px 5px;
     border-radius: 8px;
     background-color: var(--primary-0);
 }
@@ -300,20 +211,14 @@ form input {
 
 }
 
-#drop .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#drop .filter2 a {
+#main .filter2 a {
     border-radius: 8px;
     background-color: var(--primary-500);
     padding: 8px 12px;
     color: var(--primary-0);
 }
 
-#drop .filter2 {
+#main .filter2 {
     top: 50%;
     right: 50%;
     transform: translateY(40%);
@@ -323,82 +228,118 @@ form input {
 /* for drop off ends */
 
 /*=============================================
-=            popular car            =
+=            main selectOptions            =
 =============================================*/
-#popularcar, #RecomendationCar {
-    background-color: #f6f7f9;
-    padding-bottom: 16px;
+.selectSection {
+    border-right: 0.40px solid #f3f5f7;
+    background-color: var(--primary-0);
+    padding: 12px;
 }
 
-#popularcar h1, #RecomendationCar h1 {
+.selectSection h2 {
     font-weight: 600;
-    font-size: 16px;
-    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #94a7cb;
+}
+
+.selectSection input {
+    accent-color: blue;
+}
+
+.selectSection label {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: justify;
+    color: #3d5278;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.selectSection label span {
+    font-weight: 500;
     color: var(--secondary-300);
+    margin-left: 10px;
 }
 
-#popularcar p {
+.selectSection p {
     font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    color: var(--primary-500);
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: justify;
+    color: #3d5278;
 }
 
-#popularcar .cards1, #RecomendationCar .cards1 {
+.selectSection input[type="range"] {
+    width: 100%;
+    background-color: #C3D4E9;
+}
+
+/*=====  End of main selectOptions  ======*/
+
+/* main cards */
+#popularcar {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+#popularcar .cards1 {
     padding: 15px;
     border-radius: 8px;
     background-color: var(--primary-0);
     height: 350px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
-#popularcar h2, #RecomendationCar h2 {
+#popularcar h2 {
     font-weight: 700;
     font-size: 17px;
     color: var(--secondary-500);
 
 }
 
-#popularcar p, #RecomendationCar p {
+#popularcar p {
     font-weight: 700;
     font-size: 15px;
     color: var(--secondary-300);
     text-align: left;
 }
 
-#popularcar .cards1 a .fa-heart, #RecomendationCar .cards1 a .fa-heart {
+#popularcar .cards1 a .fa-heart {
     border-color: 1px solid #90A3BF;
     color: #90A3BF;
 }
 
-#popularcar .cards1 img, #RecomendationCar .cards1 img {
+#popularcar .cards1 img {
     border-color: 1px solid #90A3BF;
 }
 
-#popularcar .cards1 a .fa-heart:hover, #RecomendationCar .cards1 a .fa-heart:hover {
+#popularcar .cards1 a .fa-heart:hover {
     color: red;
     transition: 0.3s;
 }
 
-#popularcar .cards1 h4, #RecomendationCar .cards1 h4 {
+#popularcar .cards1 h4 {
     font-weight: 700;
     font-size: 17px;
     color: var(--secondary-500);
 }
 
-#popularcar .cards1 span, #RecomendationCar .cards1 span {
+#popularcar .cards1 span {
     font-size: 15px;
     color: var(--secondary-300);
 }
 
-#popularcar .cards1 del, #RecomendationCar .cards1 del {
+#popularcar .cards1 del {
     font-weight: 700;
     font-size: 15px;
     color: var(--secondary-300);
 }
 
-#popularcar .cards1 .btn a, #RecomendationCar .cards1 .btn a {
+#popularcar .cards1 .btn a {
     font-weight: 600;
     font-size: 16px;
     text-align: center;
@@ -408,21 +349,11 @@ form input {
     background-color: var(--primary-500);
 }
 
-/*=====  End of popular car  ======*/
-/* recommendation car */
-#RecomendationCar .cards1 {
-    padding: 15px;
-    border-radius: 8px;
-    background-color: var(--primary-0);
-    height: 350px;
-    margin: 0 auto;
-}
-
-#RecomendationCar .btn1 {
+#mainbtn .btn1 {
     padding: 38px 0;
 }
 
-#RecomendationCar .btn2 {
+#mainbtn .btn2 {
     font-weight: 600;
     font-size: 16px;
     text-align: center;
@@ -432,7 +363,27 @@ form input {
     background: var(--primary-500);
 }
 
-/* end of all the cars */
+#mainbtn p {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: right;
+    color: var(--secondary-300);
+}
+
+/* main cards ends */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*=============================================

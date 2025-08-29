@@ -158,281 +158,236 @@ form input {
     right: 0;
 }
 
-
 /*=============================================
-=            banner            =
+=            banner slider            =
 =============================================*/
-#banner {
-    padding: 10px 0px 16px;
+#slider {
+    padding: 30px 0 120px 0;
     background-color: #f6f7f9;
 }
 
-#banner .row {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    gap: 24px;
-}
-
-.banner1 {
-    background-image: url(../images/Ads1.png);
-    max-width: 550px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 250px;
-    padding: 20px 20px;
-    border-radius: 8px;
-    width: 100%;
-}
-
-.banner2 {
+#slider .banner1 {
     background-image: url(../images/Ads2.png);
-    max-width: 550px;
+    max-width: 500px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 250px;
+    height: 350px;
     padding: 20px 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     width: 100%;
 }
 
-.banner1 h2, .banner2 h2 {
+#slider .banner1 h2 {
     font-weight: 600;
     font-size: 24px;
     line-height: 120%;
     letter-spacing: -0.01em;
     color: var(--primary-0);
+    padding: 10px;
 }
 
-.banner1 p, .banner2 p {
+#slider .banner1 p {
     font-weight: 500;
     font-size: 12px;
     line-height: 160%;
     letter-spacing: 0.02em;
     color: var(--primary-0);
-    margin: 10px 0px 17px;
+    margin: 5px 0px;
+    padding: 10px;
 }
 
-.banner1 a {
-    font-weight: 600;
-    font-size: 12px;
-    text-align: center;
+#slider .slideimg img:hover {
+    border: 2px solid #3563E9;
+    padding: 3px;
     border-radius: 8px;
-    padding: 10px 17px;
-    background-color: #3563E9;
-    border-color: #3563E9;
-    color: var(--primary-0);
 }
 
-.banner2 a {
-    font-weight: 600;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 8px;
-    padding: 10px 17px;
-    background-color: #5CAFFC;
-    border-color: #5CAFFC;
-    color: var(--primary-0);
-}
-
-/*=====  End of banner  ======*/
-/* for drop off */
-#drop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f6f7f9;
-    padding: 20px 0;
-    margin: 0 auto;
-}
-
-.dropoff {
-    padding: 21px 55px 21px 5px;
+#slider .bannercnt1 {
+    padding: 20px;
     border-radius: 8px;
     background-color: var(--primary-0);
 }
 
-.dropoff h1 {
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: var(--secondary-500);
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.dropoff h2 {
+#slider .bannercnt1 h1 {
     font-weight: 700;
-    font-size: 16px;
-    line-height: 120%;
+    font-size: 22px;
+    line-height: 140%;
     color: var(--secondary-500);
-    margin-left: 6px;
 }
 
-.dropoff select {
+#slider .bannercnt1 .stars p {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    color: #3d5278;
+    margin-left: 10px;
+}
+
+#slider .bannercnt1 .p1 {
+    font-weight: 400;
+    font-size: 17px;
     line-height: 200%;
+    letter-spacing: -0.02em;
+    color: #3d5278;
+}
+
+#slider .bannercnt1 h2 {
+    font-weight: 500;
+    font-size: 17px;
     letter-spacing: -0.01em;
     color: var(--secondary-300);
-    outline: black;
-    border: none;
-    margin-top: 10px;
-
+    margin-top: 15px;
 }
 
-.dropoff select option {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 200%;
-    letter-spacing: -0.01em;
-    color: var(--secondary-300);
-    border: none;
-    outline: none;
-    appearance: none;
-    margin-top: 20px;
-}
-
-.dropoff .city-select, .dropoff .date-select {
-    border-right: 0.39px solid rgba(195, 212, 233, 0.4);
-
-}
-
-#drop .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#drop .filter2 a {
-    border-radius: 8px;
-    background-color: var(--primary-500);
-    padding: 8px 12px;
-    color: var(--primary-0);
-}
-
-#drop .filter2 {
-    top: 50%;
-    right: 50%;
-    transform: translateY(40%);
-    text-align: center;
-}
-
-/* for drop off ends */
-
-/*=============================================
-=            popular car            =
-=============================================*/
-#popularcar, #RecomendationCar {
-    background-color: #f6f7f9;
-    padding-bottom: 16px;
-}
-
-#popularcar h1, #RecomendationCar h1 {
+#slider .bannercnt1 span {
     font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    color: var(--secondary-300);
-}
-
-#popularcar p {
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    color: var(--primary-500);
-}
-
-#popularcar .cards1, #RecomendationCar .cards1 {
-    padding: 15px;
-    border-radius: 8px;
-    background-color: var(--primary-0);
-    height: 350px;
+    font-size: 17px;
+    letter-spacing: -0.02em;
+    color: #3d5278;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-#popularcar h2, #RecomendationCar h2 {
+#slider .bannercnt1 .btn h3 {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--secondary-500);
+    margin: 20px 0;
+}
+
+#slider .bannercnt1 .btn span {
+    font-size: 17px;
+    color: var(--secondary-300);
+
+
+}
+
+#slider .bannercnt1 .btn del {
     font-weight: 700;
     font-size: 17px;
-    color: var(--secondary-500);
-
-}
-
-#popularcar p, #RecomendationCar p {
-    font-weight: 700;
-    font-size: 15px;
     color: var(--secondary-300);
-    text-align: left;
+    margin-left: -59%;
+
 }
 
-#popularcar .cards1 a .fa-heart, #RecomendationCar .cards1 a .fa-heart {
-    border-color: 1px solid #90A3BF;
-    color: #90A3BF;
-}
-
-#popularcar .cards1 img, #RecomendationCar .cards1 img {
-    border-color: 1px solid #90A3BF;
-}
-
-#popularcar .cards1 a .fa-heart:hover, #RecomendationCar .cards1 a .fa-heart:hover {
-    color: red;
-    transition: 0.3s;
-}
-
-#popularcar .cards1 h4, #RecomendationCar .cards1 h4 {
+#slider .bannercnt1 .btn a {
     font-weight: 700;
-    font-size: 17px;
-    color: var(--secondary-500);
-}
-
-#popularcar .cards1 span, #RecomendationCar .cards1 span {
-    font-size: 15px;
-    color: var(--secondary-300);
-}
-
-#popularcar .cards1 del, #RecomendationCar .cards1 del {
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--secondary-300);
-}
-
-#popularcar .cards1 .btn a, #RecomendationCar .cards1 .btn a {
-    font-weight: 600;
-    font-size: 16px;
+    font-size: 19px;
     text-align: center;
     color: var(--primary-0);
-    border-radius: 4px;
-    padding: 10px 17px;
+    border-radius: 6px;
+    padding: 10px 22px;
     background-color: var(--primary-500);
+
 }
 
-/*=====  End of popular car  ======*/
-/* recommendation car */
-#RecomendationCar .cards1 {
-    padding: 15px;
+#slider .bannercnt1 .btn2 {
+    margin-top: 20px;
+
+}
+
+
+/*=====  End of banner slider  ======*/
+
+
+/*=============================================
+=            reviews            =
+=============================================*/
+#reviews {
+    background-color: #f6f7f9;
+    padding-bottom: 50px;
+}
+
+#reviews .review1 {
     border-radius: 8px;
     background-color: var(--primary-0);
-    height: 350px;
-    margin: 0 auto;
+    padding: 30px;
 }
 
-#RecomendationCar .btn1 {
-    padding: 38px 0;
-}
-
-#RecomendationCar .btn2 {
+.review1 h5 {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    color: var(--secondary-500);
+}
+
+.review1 .btn {
+    font-weight: 700;
+    font-size: 18px;
     text-align: center;
     color: var(--primary-0);
-    border-radius: 8px;
-    padding: 20px 27px;
-    background: var(--primary-500);
+    border-radius: 6px;
+    padding: 10px 22px;
+    background-color: var(--primary-500);
+    margin-left: 10px;
 }
 
-/* end of all the cars */
+.review1 img {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.review1 h2 {
+    font-weight: 600;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    color: var(--secondary-500);
+}
+
+.review1 p {
+    font-weight: 400;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: var(--secondary-300);
+    margin: 10px 0;
+}
+
+/*=====  End of reviews  ======*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*=============================================
